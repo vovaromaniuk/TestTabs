@@ -75,6 +75,7 @@
 	  <None Remove="Helpers\" />
 	  <None Remove="Models\" />
 	  <None Remove="Views\" />
+	  <None Remove="Messaging\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Services\" />
@@ -86,5 +87,6 @@
 	  <Folder Include="Helpers\" />
 	  <Folder Include="Models\" />
 	  <Folder Include="Views\" />
+	  <Folder Include="Messaging\" />
 	</ItemGroup>
 </Project>

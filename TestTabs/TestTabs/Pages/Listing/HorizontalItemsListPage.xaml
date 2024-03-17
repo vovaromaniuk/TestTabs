@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestTabs.Pages.Listing.HorizontalItemsListPage"
+             xmlns:listing="clr-namespace:TestTabs.Pages.Listing"
+             xmlns:views="clr-namespace:TestTabs.Views"
+             Title="HorizontalItemsListPage"
+             x:DataType="listing:HorizontalItemsListPageViewModel">
+    <VerticalStackLayout>
+         <CollectionView ItemsSource="{Binding Items}"
+                         SelectionMode="None"
+                         ItemsLayout="HorizontalList"
+                         ItemSizingStrategy="MeasureAllItems">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <views:EmployeeView/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+         </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>

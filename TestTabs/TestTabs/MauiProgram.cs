@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using TestTabs.Helpers;
+using TestTabs.Messaging;
 using TestTabs.MVVM;
 using TestTabs.Pages.Details;
 using TestTabs.Pages.Listing;
@@ -39,10 +40,12 @@ public static class MauiProgram
         builder.Services.AddSingleton<INavigationService, NavigationService>();
 
         builder.Services.AddSingleton<IHttpRequestSender, HttpRequestSender>();
+        builder.Services.AddSingleton<IMessagingService, MessagingService>();
         builder.Services.AddSingleton<IDataService, DataService>();
 
         builder.RegisterPageAndViewModel<TabsPage, TabsPageViewModel>();
         builder.RegisterPageAndViewModel<ItemsListPage, ItemsListPageViewModel>();
+        builder.RegisterPageAndViewModel<HorizontalItemsListPage, HorizontalItemsListPageViewModel>();
         builder.RegisterPageAndViewModel<ItemDetailsPage, ItemDetailsPageViewModel>();
 		
         
