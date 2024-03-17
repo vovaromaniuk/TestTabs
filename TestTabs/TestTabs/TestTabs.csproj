@@ -73,6 +73,8 @@
 	  <None Remove="Pages\Listing\" />
 	  <None Remove="Pages\Details\" />
 	  <None Remove="Helpers\" />
+	  <None Remove="Models\" />
+	  <None Remove="Views\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Services\" />
@@ -82,5 +84,7 @@
 	  <Folder Include="Pages\Listing\" />
 	  <Folder Include="Pages\Details\" />
 	  <Folder Include="Helpers\" />
+	  <Folder Include="Models\" />
+	  <Folder Include="Views\" />
 	</ItemGroup>
 </Project>

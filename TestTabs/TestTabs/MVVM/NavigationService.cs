@@ -20,7 +20,7 @@ namespace TestTabs.MVVM
 
             if (page is not null)
             {
-                await _navigation.PushAsync(page);
+                await Navigation?.PushAsync(page);
             }
         }
     }

@@ -16,7 +16,7 @@ namespace TestTabs.Helpers
             NavigationTypesHolder.AddOrUpdate<TPage, TViewModel>();
         }
 
-        public static TPage ResolvePage<TPage>(this IServiceProvider services, object arguments = null)
+        public static TPage ResolvePage<TPage>(this IServiceProvider services, object parameter = null)
             where TPage : Page
         {
             // TODO: add try catch + logging 
@@ -29,10 +29,17 @@ namespace TestTabs.Helpers
 
                 if(vmType != null)
                 {
-                    var vm = services.GetRequiredService(vmType);
+                    var vm = services.GetRequiredService(vmType)  as BaseViewModel;
 
+                    if(vm != null)
+                    {
+                        page.NavigatedTo += (o, args) =>
+                        {
+                            vm.NavigatedTo(parameter);
+                        };
 
-                    page.BindingContext = vm;
+                        page.BindingContext = vm;
+                    }
                 }
             }
 

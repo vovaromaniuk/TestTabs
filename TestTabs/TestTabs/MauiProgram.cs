@@ -4,6 +4,7 @@ using TestTabs.MVVM;
 using TestTabs.Pages.Details;
 using TestTabs.Pages.Listing;
 using TestTabs.Pages.Tabs;
+using TestTabs.Services;
 
 namespace TestTabs;
 
@@ -37,7 +38,10 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<INavigationService, NavigationService>();
 
-		builder.RegisterPageAndViewModel<TabsPage, TabsPageViewModel>();
+        builder.Services.AddSingleton<IHttpRequestSender, HttpRequestSender>();
+        builder.Services.AddSingleton<IDataService, DataService>();
+
+        builder.RegisterPageAndViewModel<TabsPage, TabsPageViewModel>();
         builder.RegisterPageAndViewModel<ItemsListPage, ItemsListPageViewModel>();
         builder.RegisterPageAndViewModel<ItemDetailsPage, ItemDetailsPageViewModel>();
 		
