@@ -65,4 +65,22 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Services\" />
+	  <None Remove="MVVM\" />
+	  <None Remove="Pages\" />
+	  <None Remove="Pages\Tabs\" />
+	  <None Remove="Pages\Listing\" />
+	  <None Remove="Pages\Details\" />
+	  <None Remove="Helpers\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Services\" />
+	  <Folder Include="MVVM\" />
+	  <Folder Include="Pages\" />
+	  <Folder Include="Pages\Tabs\" />
+	  <Folder Include="Pages\Listing\" />
+	  <Folder Include="Pages\Details\" />
+	  <Folder Include="Helpers\" />
+	</ItemGroup>
 </Project>

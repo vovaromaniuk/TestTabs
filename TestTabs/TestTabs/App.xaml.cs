@@ -1,12 +1,14 @@
-﻿namespace TestTabs;
+﻿using TestTabs.Pages.Tabs;
+
+namespace TestTabs;
 
 public partial class App : Application
 {
-	public App()
+	public App(Page mainPage)
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		MainPage = mainPage;
 	}
 }
 
